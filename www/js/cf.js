@@ -203,6 +203,9 @@ $(document).ready(function() {
 
   /* Function factory for adding callbacks */
   var eventCb = function(column) {
+    if (navigator.mozVibrate) {
+      navigator.mozVibrate(1000);
+    }
     return function() {
       dropDisc(column, player, 2);
     }
