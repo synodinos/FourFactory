@@ -1,4 +1,4 @@
-firefox-os-hackathon
+FourFactory
 ====================
 
-Lets go for the win!
+Let the games begin!
