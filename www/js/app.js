@@ -18,40 +18,40 @@ define(function(require) {
     //require('./install-button');
 
     // Write your app here.
-    var install = require('install');
-    install.on('change', function() {
-        if (install.state == 'uninstalled')
-            install();
-        else {
-            var request = window.navigator.mozApps.getInstalled(); 
-            request.onerror = function(e) {
-              alert("Error calling getInstalled: " + request.error.name);
-            };
-            request.onsuccess = function(e) {
-                var appsRecord = request.result;
-                if (appsRecord[0].manifest.version != "0.6")
-                    install();
-            };
-        }
-    });
-    install.on('error', function(e, err) {
-        // Feel free to customize this
-        alert('There was an error during installation.');
-    });
-    if (install.state == 'uninstalled') {
-        install();
-    }
-    else {
-            var request = window.navigator.mozApps.getInstalled(); 
-            request.onerror = function(e) {
-              alert("Error calling getInstalled: " + request.error.name);
-            };
-            request.onsuccess = function(e) {
-                var appsRecord = request.result;
-                if (appsRecord[0].manifest.version != "0.6") {
-                    install();
-                }
-            };        
-    }
+    // var install = require('install');
+    // install.on('change', function() {
+    //     if (install.state == 'uninstalled')
+    //         install();
+    //     else {
+    //         var request = window.navigator.mozApps.getInstalled(); 
+    //         request.onerror = function(e) {
+    //           alert("Error calling getInstalled: " + request.error.name);
+    //         };
+    //         request.onsuccess = function(e) {
+    //             var appsRecord = request.result;
+    //             if (appsRecord[0].manifest.version != "0.6")
+    //                 install();
+    //         };
+    //     }
+    // });
+    // install.on('error', function(e, err) {
+    //     // Feel free to customize this
+    //     alert('There was an error during installation.');
+    // });
+    // if (install.state == 'uninstalled') {
+    //     install();
+    // }
+    // else {
+    //         var request = window.navigator.mozApps.getInstalled(); 
+    //         request.onerror = function(e) {
+    //           alert("Error calling getInstalled: " + request.error.name);
+    //         };
+    //         request.onsuccess = function(e) {
+    //             var appsRecord = request.result;
+    //             if (appsRecord[0].manifest.version != "0.6") {
+    //                 install();
+    //             }
+    //         };        
+    // }
 });
 
