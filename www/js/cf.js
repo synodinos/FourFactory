@@ -84,15 +84,20 @@ var checkWin = function(matrix, row, column) {
 $(document).ready(function() {
 
   /* Load sound effects */
-  var sndDisk = new Audio("audio/click.mp3");
-  var sndCheer = new Audio("audio/cheer.mp3");
-  var sndLoop = new Audio("audio/loop.mp3");
+  var sndDisk = new Audio();
+  var sndCheer = new Audio();
+  var sndLoop = new Audio();
+
+  sndDisk.src = "audio/click.ogg";
+  sndCheer.src = "audio/cheer.ogg";
+  sndLoop.src = "audio/loop.ogg";
+
   /* HTML5 audio loop is flaky but lets try */
   sndLoop.addEventListener('ended', function() {
     this.currentTime = 0;
     this.play();
   }, false);
-  setTimeout(sndLoop.play(), 500);
+  setTimeout(function(){sndLoop.play()}, 500);
 
   /* This will indicate the color of th enext players checker. On page load it's red. */
   $("div#next").addClass("disc_player disc_player0");

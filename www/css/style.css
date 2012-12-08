@@ -2,11 +2,13 @@ html {
     height: 100%;
 }
 body {
-  background:blue;
-  background: -webkit-linear-gradient(top, #D9D9F3, #7AA9DD);
+  background-image: url("../img/background.jpg");
+  background-repeat: repeat;
+  /*background:blue;
+  background: -moz-linear-gradient(top, #D9D9F3, #7AA9DD);*/
   height: 90%;
   margin: 0;
-  background-repeat: no-repeat;
+  /*background-repeat: no-repeat;*/
   overflow-x: hidden; 
 }
 @font-face {
@@ -19,8 +21,8 @@ body {
 }
 h1, h2 {
     padding-top:.2em;
-    color:#e50;
-    text-shadow: 0 2px white;
+    color: #f5f5f5;
+    text-shadow: 0 12px black;
     font-family: REZ;
 }
 h1 {
@@ -32,24 +34,24 @@ h1 {
   height: 70px;
   width: 70px;
   display:inline-table;
-  -webkit-border-radius: 75px;
+  border-radius: 75px;
   border-radius: 75px;
   position: absolute;
 }
 .disc_player1 {
   background-color: yellow;
   background-image:
-    -webkit-radial-gradient(yellowgreen 15%, transparent 16%),
-	  -webkit-radial-gradient(yellowgreen 15%, transparent 16%);
-  background-size:20px 20px;
+    -moz-radial-gradient(yellowgreen 15%, transparent 16%);
+
+  background-size: 20px 20px;
   background-position: 0 0, 10px 10px;
 }
 .disc_player0 {
   background-color: red;
   background-image:
-    -webkit-radial-gradient(#bc8f8f 15%, transparent 16%),
-	  -webkit-radial-gradient(#bc8f8f 15%, transparent 16%);
-  background-size:20px 20px;
+    -moz-radial-gradient(#bc8f8f 15%, transparent 16%);
+
+  background-size: 20px 20px;
   background-position: 0 0, 10px 10px;
 }
 #board-container {
@@ -74,7 +76,7 @@ h1 {
   background-color: white;
   height: 70px;
   width: 70px;
-  -webkit-border-radius: 75px;
+  border-radius: 75px;
   margin-left: 20px;
   margin-top: 20px;
   display: inline-block;
@@ -92,7 +94,7 @@ div#stats {
   top: 200px;
   width: 150px;
   background-color:white;
-  -webkit-border-radius: 20px;
+  border-radius: 20px;
   padding: 10px 30px 10px 10px;
 }
 div#stats h1 {
@@ -103,4 +105,4 @@ div#stats h1 {
 div#stats {
   font-family: LAC;
   font-size:80%;
-};
+}
