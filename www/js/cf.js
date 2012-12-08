@@ -82,6 +82,9 @@ var checkWin = function(matrix, row, column) {
 };
 
 $(document).ready(function() {
+  // Use the GestureDetector.js library to handle gestures.
+  // This will generate tap, pan, swipe and transform events
+  new GestureDetector(frames).startDetecting();
 
   /* Load sound effects */
   var sndDisk = new Audio();
