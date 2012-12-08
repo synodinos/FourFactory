@@ -1,3 +1,7 @@
 .idea/
 www-deprecated/Www-deprecated.iml
 Www/Www.iml
+www-built
+www-ghdeploy
+hackathon.sublime-project
+hackathon.sublime-workspace

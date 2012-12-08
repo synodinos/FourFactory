@@ -2,15 +2,16 @@
   "version": "0.1",
   "name": "FourFactory",
   "description": "Our new awesome Open Web App",
-  "launch_path": "/",
+  "launch_path": "/FourFactory/",
   "icons": {
-    "16": "/img/icons/mortar-16.png",
-    "48": "/img/icons/mortar-48.png",
-    "128": "/img/icons/mortar-128.png"
+    "16": "/FourFactory/img/icons/mortar-16.png",
+    "48": "/FourFactory/img/icons/mortar-48.png",
+    "64": "/FourFactory/img/icons/mortar-64.png",
+    "128": "/FourFactory/img/icons/mortar-128.png"
   },
   "developer": {
     "name": "ASS",
-    "url": "http://yourawesomeapp.com"
+    "url": "http://synodinos.github.com/FourFactory/"
   },
   "installs_allowed_from": ["*"],
   "appcache_path": "/cache.manifest",
@@ -18,7 +19,7 @@
     "el": {
       "description": "Η νέα γαμάτη εφαρμογή μας για τον Ανοιχτό Ιστό",
       "developer": {
-        "url": "http://yourawesomeapp.com"
+        "url": "http://synodinos.github.com/FourFactory/"
       }
     }
   },
