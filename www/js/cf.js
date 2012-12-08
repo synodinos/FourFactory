@@ -82,6 +82,13 @@ var checkWin = function(matrix, row, column) {
 };
 
 $(document).ready(function() {
+  var isMobile;
+  if ($('#board-container').height() == 280) {
+    isMobile = true;
+  } else {
+    isMobile = false;
+  }
+
   /* Load sound effects */
   var sndDisk = new Audio();
   var sndCheer = new Audio();
@@ -146,9 +153,11 @@ $(document).ready(function() {
 
     // TODO this is ugly
     if ($('#board-container').height() == 280) {
+      isMobile = true;
       var responsive_length = 62;
       var responsive_length_2 = 52;
     } else {
+      isMobile = false;
       var responsive_length = 358;
       var responsive_length_2 = 42;
     }
@@ -201,15 +210,20 @@ $(document).ready(function() {
 
   /* Adding player controls */
   for (i = 0; i <= 6; i++) {
-    $('#controls').append('<div id="col' + i + '" class="control">&darr;</div>');
-    // $('#col' + i).click(eventCb(i));
+    if (isMobile) {
+      $('#controls').append('<div id="col' + i + '" class="control">&darr;</div>');
 
-    var control = document.querySelector("#col" + i);
-    // Use the GestureDetector.js library to handle gestures.
-    // This will generate tap, pan, swipe and transform events
-    new GestureDetector(control).startDetecting();
-    // Handle gesture events
-    control.addEventListener('swipe', eventCb(i));
+      var control = document.querySelector("#col" + i);
+      // Use the GestureDetector.js library to handle gestures.
+      // This will generate tap, pan, swipe and transform events
+      new GestureDetector(control).startDetecting();
+      // Handle gesture events
+      control.addEventListener('swipe', eventCb(i));
+    } else {
+      $('#controls').append('<button id="col' + i + '" class="control">&darr;</button>');
+      $('#col' + i).click(eventCb(i));      
+    }
+
   }
 
   /* Building 7*6=42 holes in the board */
