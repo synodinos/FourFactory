@@ -18,10 +18,10 @@ define(function(require) {
     //require('./install-button');
 
     // Write your app here.
-    // var install = require('install');
-    // install.on('change', function() {
-    //     if (install.state == 'uninstalled')
-    //         install();
+    var install = require('install');
+    install.on('change', function() {
+        if (install.state == 'uninstalled')
+            install();
     //     else {
     //         var request = window.navigator.mozApps.getInstalled(); 
     //         request.onerror = function(e) {
@@ -33,14 +33,14 @@ define(function(require) {
     //                 install();
     //         };
     //     }
-    // });
-    // install.on('error', function(e, err) {
-    //     // Feel free to customize this
-    //     alert('There was an error during installation.');
-    // });
-    // if (install.state == 'uninstalled') {
-    //     install();
-    // }
+    });
+    install.on('error', function(e, err) {
+        // Feel free to customize this
+        alert('There was an error during installation.');
+    });
+    if (install.state == 'uninstalled') {
+        install();
+    }
     // else {
     //         var request = window.navigator.mozApps.getInstalled(); 
     //         request.onerror = function(e) {
