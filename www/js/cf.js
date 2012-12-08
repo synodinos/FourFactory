@@ -97,7 +97,7 @@ $(document).ready(function() {
     this.currentTime = 0;
     this.play();
   }, false);
-  setTimeout(function(){sndLoop.play()}, 500);
+  //setTimeout(function(){sndLoop.play()}, 500);
 
   /* This will indicate the color of th enext players checker. On page load it's red. */
   $("div#next").addClass("disc_player disc_player0");
