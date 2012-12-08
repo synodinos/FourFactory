@@ -221,7 +221,7 @@ $(document).ready(function() {
       // This will generate tap, pan, swipe and transform events
       new GestureDetector(control).startDetecting();
       // Handle gesture events
-      control.addEventListener('swipe', eventCb(i));
+      // control.addEventListener('swipe', eventCb(i));
       control.addEventListener('tap', eventCb(i));
     } else {
       $('#controls').append('<button id="col' + i + '" class="control">&darr;</button>');
