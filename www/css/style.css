@@ -66,6 +66,7 @@ body {
     display: inline;
     margin-left: 7px;
     margin-right: 11px;
+    padding: 10px;
   }
   div#stats {
     position: relative;
