@@ -1,16 +1,11 @@
 
 css/app.css
 ----------------
-css/install-button.css
 css/app.css
 
 css/style.css
 ----------------
 css/style.css
-
-css/install-button.css
-----------------
-css/install-button.css
 
 js/lib/../app.js
 ----------------

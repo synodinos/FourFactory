@@ -20,10 +20,8 @@ body {
 }
 @media (max-width: 320px) {
   #board-container {
-    width: 260px;
-    height: 260px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    height: 280px;
   }
   h1, h2 {
       padding-top:.2em;
@@ -46,30 +44,42 @@ body {
   }
   .hole {
     background-color: white;
-    height: 32px;
-    width: 32px;
+    height: 38px;
+    width: 38px;
     border-radius: 42px;
-    margin-left: 5px;
+    margin-left: 7px;
     margin-top: 2px;
     display: inline-block;
     z-index: -1;
   }
   #controls {
-    width: 280px;
+    width: 319px;
     height: 30px;
     margin-left: auto;
     margin-right: auto;
   }
-  button.control {
-    margin-left: 12px;
-    margin-right: 0px;
+  div.control {
+    display: inline;
+    margin-left: 7px;
+    margin-right: 11px;
   }
   div#stats {
     position: relative;
-    width: 280px;
+    width: 100%;
     background-color:white;
-    border-radius: 20px;
     padding: 3px 3px 3px 3px;
+  }
+  
+    
+    
+  
+  #objectives {
+    width: 60%;
+    display: inline-table;
+  }
+  #next-checker {
+    width: 30%;
+    display: inline-table;
   }
   .disc_player {
     background-color: #c06;
@@ -92,6 +102,13 @@ body {
       -moz-radial-gradient(#bc8f8f 15%, transparent 16%);
     background-size: 20px 20px;
     background-position: 0 0, 10px 10px;
+  }
+  #board {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(212,0,198); opacity: 0.5;
+    z-index: 10;
+    padding-top: 5px;
   }
 }
 @media (min-width: 321px) {
@@ -136,8 +153,9 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
-  button.control {
-    margin-left: 42px;
+  div.control {
+    display: inline;
+    margin-left: 40px;
     margin-right: 24px;
   }
   div#stats {
@@ -172,11 +190,11 @@ body {
     background-size: 20px 20px;
     background-position: 0 0, 10px 10px;
   }
-}
-#board {
-  width: 100%;
-  height: 100%;
-  background-color: rgb(212,0,198); opacity: 0.5;
-  z-index: 10;
-  border-radius: 12px;
+  #board {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(212,0,198); opacity: 0.5;
+    z-index: 10;
+    border-radius: 12px;
+  }
 }
