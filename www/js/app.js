@@ -29,7 +29,7 @@ define(function(require) {
             };
             request.onsuccess = function(e) {
                 var appsRecord = request.result;
-                if (appsRecord[0].manifest.version != "0.5")
+                if (appsRecord[0].manifest.version != "0.6")
                     install();
             };
         }
@@ -48,7 +48,7 @@ define(function(require) {
             };
             request.onsuccess = function(e) {
                 var appsRecord = request.result;
-                if (appsRecord[0].manifest.version != "0.5") {
+                if (appsRecord[0].manifest.version != "0.6") {
                     install();
                 }
             };        
