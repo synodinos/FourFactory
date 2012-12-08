@@ -103,8 +103,13 @@ $(document).ready(function() {
   $("div#next").addClass("disc_player disc_player0");
 
   /* These will be used for calculating how far to drop the checkers, so they align with the "holes". */
-  var boardMargin = 20;     //->css
-  var diskRadious = 70      //->css
+  if ($('#board-container').height() == 280) {
+    var boardMargin = 7;     //->css
+    var diskRadious = 35;      //->css
+  } else {
+    var boardMargin = 20;     //->css
+    var diskRadious = 70;      //->css
+  }
 
   /* This is the current player */
   var player = 0; // 0->red, 1->yellow
@@ -139,15 +144,25 @@ $(document).ready(function() {
     } else {
       nextRow = topOccupiedRow - 1;
     }
+
+    // TODO this is ugly
+    if ($('#board-container').height() == 280) {
+      var responsive_length = 62;
+      var responsive_length_2 = 52;
+    } else {
+      var responsive_length = 358;
+      var responsive_length_2 = 42;
+    }
+
     if (topOccupiedRow > 0) { // Are you trying to drop a checker on a column that's already full
-      var depth = boardMargin + (nextRow - 1) * (boardMargin + diskRadious) + 358;
+      var depth = boardMargin + (nextRow - 1) * (boardMargin + diskRadious) + responsive_length;
       matrix[nextRow][column] = p;
 
       $('#board-container')
               .prepend('<div class="disc_player disc_player' + p + '" id="dp'
               + disk
               + '" style="margin-left: ' + diskLeftMargin
-              + 'px; z-index: ' + (disk - 42) + '"></div>');
+              + 'px; z-index: ' + (disk - responsive_length_2) + '"></div>');
 
       /* Animate disc */
       $('#dp' + disk).animate({
