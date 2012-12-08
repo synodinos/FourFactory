@@ -15,10 +15,21 @@ define(function(require) {
     // Want to install the app locally? This library hooks up the
     // installation button. See <button class="install-btn"> in
     // index.html
-    require('./install-button');
+    //require('./install-button');
 
     // Write your app here.
-
+    var install = require('install');
+    install.on('change', function() {
+        if (install.state == 'uninstalled')
+            install();
+    });
+    install.on('error', function(e, err) {
+        // Feel free to customize this
+        alert('There was an error during installation.');
+    });
+    if (install.state == 'uninstalled') {
+        install();
+    }
 
 
 
