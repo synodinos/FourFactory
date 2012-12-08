@@ -58,10 +58,11 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
-  div.control {
+  button.control, div.control {
     display: inline;
     margin-left: 7px;
     margin-right: 11px;
+    padding: 10px;
   }
   div#stats {
     position: relative;
@@ -153,7 +154,7 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
-  div.control {
+  button.control, div.control {
     display: inline;
     margin-left: 40px;
     margin-right: 24px;
