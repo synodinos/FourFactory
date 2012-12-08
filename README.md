@@ -1,4 +1,4 @@
 firefox-os-hackathon
 ====================
 
-Firefox OS Hackathon
+Lets go for the win!
