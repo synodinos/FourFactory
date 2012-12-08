@@ -158,7 +158,7 @@ $(document).ready(function() {
       var responsive_length_2 = 52;
     } else {
       isMobile = false;
-      var responsive_length = 358;
+      var responsive_length = 115;
       var responsive_length_2 = 42;
     }
 
