@@ -82,10 +82,6 @@ var checkWin = function(matrix, row, column) {
 };
 
 $(document).ready(function() {
-  // Use the GestureDetector.js library to handle gestures.
-  // This will generate tap, pan, swipe and transform events
-  new GestureDetector(frames).startDetecting();
-
   /* Load sound effects */
   var sndDisk = new Audio();
   var sndCheer = new Audio();
@@ -205,8 +201,15 @@ $(document).ready(function() {
 
   /* Adding player controls */
   for (i = 0; i <= 6; i++) {
-    $('#controls').append('<button id="col' + i + '" class="control">&darr;</button>');
-    $('#col' + i).click(eventCb(i));
+    $('#controls').append('<div id="col' + i + '" class="control">&darr;</div>');
+    // $('#col' + i).click(eventCb(i));
+
+    var control = document.querySelector("#col" + i);
+    // Use the GestureDetector.js library to handle gestures.
+    // This will generate tap, pan, swipe and transform events
+    new GestureDetector(control).startDetecting();
+    // Handle gesture events
+    control.addEventListener('swipe', eventCb(i));
   }
 
   /* Building 7*6=42 holes in the board */
