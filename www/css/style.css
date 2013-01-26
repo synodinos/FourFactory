@@ -64,8 +64,8 @@ body {
   }
   button.control, div.control {
     display: inline;
-    margin-left: 12px;
-    margin-right: 5px;
+    margin-left: 10px;
+    margin-right: 0px;
     padding: 10px;
   }
   div#stats {
