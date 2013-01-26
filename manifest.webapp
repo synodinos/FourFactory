@@ -4,10 +4,10 @@
   "description": "Our new awesome Open Web App",
   "launch_path": "/FourFactory/",
   "icons": {
-    "16": "/FourFactory/img/icons/mortar-16.png",
-    "48": "/FourFactory/img/icons/mortar-48.png",
-    "64": "/FourFactory/img/icons/mortar-64.png",
-    "128": "/FourFactory/img/icons/mortar-128.png"
+    "16": "/FourFactory/img/icons/app-logo-fireworks-export.png",
+    "48": "/FourFactory/img/icons/app-logo-fireworks-export.png",
+    "64": "/FourFactory/img/icons/app-logo-fireworks-export.png",
+    "128": "/FourFactory/img/icons/app-logo-fireworks-export.png"
   },
   "developer": {
     "name": "ASS",
