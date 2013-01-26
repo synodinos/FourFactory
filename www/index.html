@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Four Factory</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script type="text/javascript" src="./js/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/gesture_detector.js"></script>
+  <script type="text/javascript" src="./js/cf.js"></script>
+  <link rel="stylesheet" type="text/css" href="./css/style.css" media="screen"/>
+  <link rel="shortcut icon" href="favicon.ico" TYPE="image/x-icon">
+</head>
+<body>
+<h1>Four Factory</h1>
+<div id="controls"></div>
+<div id="board-container">
+  <div id="board"></div>
+</div>
+<div id="stats">
+  <div id="objectives">
+  <h1>Objective</h1>
+  <p>To win Four Factory you must be the first player to get four of your colored checkers in a
+  row either horizontally, vertically or diagonally.</p>
+</div>
+<div id="next-checker">
+  <h1>Next Checker</h1>
+  <div id="next" style="display: block;position: relative;margin-left: auto;margin-right: auto;"></div>
+</div>
+
+</div>
+    <!-- Using require.js, a module system for javascript, include the
+         js files. This loads "main.js", which in turn can load other
+         files, all handled by require.js:
+         http://requirejs.org/docs/api.html#jsfiles -->
+    <script type="text/javascript"
+            data-main="js/init.js"
+            src="js/lib/require.js"></script>
+</body>
+</html>
