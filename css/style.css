@@ -4,10 +4,11 @@ html {
 body {
   background-image: url("../img/background.jpg");
   background-repeat: repeat;
-  
+  /*background:blue;
+  background: -moz-linear-gradient(top, #D9D9F3, #7AA9DD);*/
   height: 90%;
   margin: 0;
-  
+  /*background-repeat: no-repeat;*/
   overflow-x: hidden; 
 }
 @font-face {
@@ -18,6 +19,8 @@ body {
   font-family: LAC;
   src: url('../fonts/LAC.ttf');
 }
+
+/* ------------------- Begin Mobile ------------------- */
 @media (max-width: 320px) {
   #board-container {
     width: 100%;
@@ -51,6 +54,7 @@ body {
     margin-top: 2px;
     display: inline-block;
     z-index: -1;
+
   }
   #controls {
     width: 319px;
@@ -70,10 +74,10 @@ body {
     background-color:white;
     padding: 3px 3px 3px 3px;
   }
-  
-    
-    
-  
+  /*div#stats p, div#stats h1{*/
+    /*width: 40%;*/
+    /*display: inline-table;*/
+  /*}*/
   #objectives {
     width: 60%;
     display: inline-table;
@@ -94,6 +98,7 @@ body {
     background-color: yellow;
     background-image:
       -moz-radial-gradient(yellowgreen 15%, transparent 16%);
+
     background-size: 20px 20px;
     background-position: 0 0, 10px 10px;
   }
@@ -101,6 +106,7 @@ body {
     background-color: red;
     background-image:
       -moz-radial-gradient(#bc8f8f 15%, transparent 16%);
+
     background-size: 20px 20px;
     background-position: 0 0, 10px 10px;
   }
@@ -112,6 +118,10 @@ body {
     padding-top: 5px;
   }
 }
+/* ------------------- End Mobile ------------------- */
+
+
+/* ------------------- Begin Desktop ------------------- */
 @media (min-width: 321px) {
   #board-container {
     width: 650px;
@@ -147,6 +157,7 @@ body {
     margin-top: 20px;
     display: inline-block;
     z-index: -1;
+
   }
   #controls {
     width: 650px;
@@ -181,6 +192,7 @@ body {
     background-color: yellow;
     background-image:
       -moz-radial-gradient(yellowgreen 15%, transparent 16%);
+
     background-size: 20px 20px;
     background-position: 0 0, 10px 10px;
   }
@@ -188,6 +200,7 @@ body {
     background-color: red;
     background-image:
       -moz-radial-gradient(#bc8f8f 15%, transparent 16%);
+
     background-size: 20px 20px;
     background-position: 0 0, 10px 10px;
   }
@@ -199,3 +212,8 @@ body {
     border-radius: 12px;
   }
 }
+/* ------------------- End Desktop ------------------- */
+
+
+
+
