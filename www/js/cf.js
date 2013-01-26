@@ -139,6 +139,8 @@ $(document).ready(function() {
     // Helps drops checker in the correct column
     var diskLeftMargin = boardMargin + column * (boardMargin + diskRadious);
 
+
+
     /* Finds how "deep" (row) the checker will go */
     for (k = 5; k >= 0; k--) {
       if (typeof matrix[k][column] != 'undefined') {
@@ -158,18 +160,26 @@ $(document).ready(function() {
       var responsive_length_2 = 52;
     } else {
       isMobile = false;
-      var responsive_length = 115;
+      var responsive_length = 110;
       var responsive_length_2 = 42;
     }
 
     if (topOccupiedRow > 0) { // Are you trying to drop a checker on a column that's already full
-      var depth = boardMargin + (nextRow - 1) * (boardMargin + diskRadious) + responsive_length;
+        console.log("var depth = boardMargin + (nextRow - 1) * (boardMargin + diskRadious) + responsive_length");
+        console.log("boardMargin="+boardMargin+"nextRow - 1="+(nextRow - 1)+"boardMargin="+boardMargin+"diskRadious"+diskRadious+ "responsive_length="+responsive_length);
+
+        if (!isMobile) {
+            var depth = boardMargin + nextRow *(25 + diskRadious);
+        } else {
+            var depth = boardMargin + nextRow *(10 + diskRadious);
+        }
+
       matrix[nextRow][column] = p;
 
       $('#board-container')
               .prepend('<div class="disc_player disc_player' + p + '" id="dp'
               + disk
-              + '" style="margin-left: ' + diskLeftMargin
+              + '" style="margin-left: ' + (isMobile?(diskLeftMargin+(column*4)):diskLeftMargin)
               + 'px; z-index: ' + (disk - responsive_length_2) + '"></div>');
 
       /* Animate disc */
