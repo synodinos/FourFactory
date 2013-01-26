@@ -64,8 +64,8 @@ body {
   }
   button.control, div.control {
     display: inline;
-    margin-left: 7px;
-    margin-right: 11px;
+    margin-left: 10px;
+    margin-right: 0px;
     padding: 10px;
   }
   div#stats {
@@ -125,7 +125,7 @@ body {
 @media (min-width: 321px) {
   #board-container {
     width: 650px;
-    height: 560px;
+    height: 590px;
     margin-left: auto;
     margin-right: auto;
   }
